@@ -1,3 +1,3 @@
-A fun web page combining html, css and, javascript.
-Interactive and a enjoyable lab to complete.
-This was for my javascript class.
+A fun and interactive web page combining HTML, CSS, and JavaScript.
+ 
+This was for my JavaScript class and an enjoyable lab to complete.
