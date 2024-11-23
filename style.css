@@ -53,8 +53,8 @@ li {
     list-style-type: none;
 }
 
-ul{
-    background-color: rgb(250, 93, 138);
+div{
+    background-color: rgb(94, 244, 197);
 }
 
 footer{
@@ -63,4 +63,21 @@ footer{
     background-color: rgb(37, 26, 24);
     color: blanchedalmond;
     padding: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 9px;
+        margin: 9px;
+    }
 }

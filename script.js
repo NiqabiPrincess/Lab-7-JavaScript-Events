@@ -91,13 +91,15 @@ function timeGreet() {
 
 
 
-    const list = document.getElementById('lvlList');
-    const messageL = document.getElementById('listMessage');
+    const messageB = document.getElementById('btnMessage');
+    const buttons = document.getElementById('buttons');
 
-    list.addEventListener('click', function(event){
-        if (event.target.tagName === 'LI') {
-            alert('You Have Selected: ' + event.target.textContent);
-            messageL.textContent = "You Have Passed" + event.target.textContent;
-            event.target.style.backgroundColor = 'lightblue'; 
+    buttons.addEventListener('click', (event) =>{
+        if (event.target.tagName === 'BUTTON') {
+            alert('You have Selected Level: ' + event.target.textContent);
+            messageB.textContent = "You have Passed: " + event.target.textContent;
         }
     });
+
+
+    
