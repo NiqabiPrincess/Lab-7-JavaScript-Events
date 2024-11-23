@@ -56,19 +56,19 @@ function saveName (){
 function timeGreet() { 
     const time = new Date().getHours();
     if (time >= 5 && time <=10 ) { 
-        return 'Good Morning and size the day,  '; 
+        return 'Good Morning! Seize the Day and Make it Amazing!,  '; 
     }
     
     else if (time >= 11 && time <= 17 ) { 
-        return 'Good Afternoon and keep working hard, '; 
+        return 'Good Afternoon! Keep up the Great Work!, '; 
     }
     
     else if (time >= 18 && time <= 22){ 
-        return 'Good Evening and rest well, ';
+        return 'Good Evening! Time to Unwind and Relax!, ';
     }
     
     else {
-        return 'Hey it is late! You Should be Sleeping! '; 
+        return 'Hey it is late! You Should be Sleeping and Recharging for Tomorrow! '; 
         }
     }
     
