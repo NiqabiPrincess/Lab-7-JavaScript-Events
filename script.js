@@ -23,3 +23,53 @@ const messageK = document.getElementById('keyMessage');
 document.addEventListener('keydown', function(event) {
     messageK.textContent = (`you have pressed the: ${event.key} key on your keyboard`);
 });
+
+
+
+const saveButton = document.getElementById('save-btn');
+const nameInput = document.getElementById('name');
+const displayName = document.getElementById('display-name');
+
+saveButton.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    saveName();
+});
+
+
+function updateDisplay(){ 
+    const savedName = localStorage.getItem('nameInput'); 
+
+    const greet = timeGreet();
+        if (savedName) {
+            nameInput.value = savedName; 
+            displayName.textContent = greet + savedName ; 
+        } else {
+            displayName.textContent = 'no name saved';
+        } 
+    }
+function saveName (){ 
+    if (nameInput) {
+        localStorage.setItem('nameInput', nameInput.value); 
+        updateDisplay();
+        }
+    }
+function timeGreet() { 
+    const time = new Date().getHours();
+    if (time >= 5 && time <=10 ) { 
+        return 'Good Morning and size the day,  '; 
+    }
+    
+    else if (time >= 11 && time <= 17 ) { 
+        return 'Good Afternoon and keep working hard, '; 
+    }
+    
+    else if (time >= 18 && time <= 22){ 
+        return 'Good Evening and rest well, ';
+    }
+    
+    else {
+        return 'Hey it is late! You Should be Sleeping! '; 
+        }
+    }
+    
+    updateDisplay();

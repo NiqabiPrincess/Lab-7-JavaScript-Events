@@ -12,6 +12,7 @@ section{
     background-color: antiquewhite;
     padding: 20px;
     text-align: center;
+    align-items: center;
 }
 
 button{
@@ -32,4 +33,10 @@ button:hover{
     text-decoration: underline;
     color: antiquewhite;
 
+}
+
+form {
+    background-color: rgb(211, 169, 245);
+    border-color: black;
+    border: 2px solid;
 }
