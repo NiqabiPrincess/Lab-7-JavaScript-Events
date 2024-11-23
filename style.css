@@ -36,7 +36,14 @@ button:hover{
 }
 
 form {
-    background-color: rgb(211, 169, 245);
     border-color: black;
     border: 2px solid;
+}
+
+.form1{
+    background-color: rgb(211, 169, 245);
+}
+
+.form2{
+    background-color: rgb(79, 201, 231);
 }

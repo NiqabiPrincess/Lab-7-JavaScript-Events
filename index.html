@@ -24,15 +24,25 @@
         <p id="keyMessage">Try Pressing Something on your Keyboard</p>
         <br><br>
 
-        <form action="#" method="post">
+        <form action="#" method="post" class = "form1">
             <label for="name">Enter your Name:</label> <br>
             <input type="text" id="name" name = "name" required>
             <br><br>
             <button id="save-btn" class = "button-1">Submit</button>
             <br><br>
             <p id="display-name">Your Greeting Will Appear Here.</p>
-    
         </form>
+        <br><br>
+
+        <form action="#" method="post" class = "form2">
+            <label for="focusBlur">Type Something Here:</label> <br>
+            <input type="text" id="focusBlur" name = "focusBlur" onfocus="handleFocus();" onblur="handleBlur();" required>
+            <br><br>
+            <p id="focusMessage">Waiting...</p>
+        </form>
+        <br><br>
+
+
     </section>
     
 
