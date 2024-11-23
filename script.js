@@ -27,6 +27,7 @@ document.addEventListener('keydown', function(event) {
 
 
 const saveButton = document.getElementById('save-btn');
+const clearButton = document.getElementById('clear-btn');
 const nameInput = document.getElementById('name');
 const displayName = document.getElementById('display-name');
 
@@ -34,17 +35,22 @@ saveButton.addEventListener('click', (event) => {
     event.preventDefault(); 
     saveName();
 });
+clearButton.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    clearName();
+});
+
 
 
 function updateDisplay(){ 
-    const savedName = localStorage.getItem('nameInput'); 
+const savedName = localStorage.getItem('nameInput'); 
 
     const greet = timeGreet();
         if (savedName) {
             nameInput.value = savedName; 
             displayName.textContent = greet + savedName ; 
         } else {
-            displayName.textContent = 'no name saved';
+            displayName.textContent = 'All Empty Here!';
         } 
     }
 function saveName (){ 
@@ -52,6 +58,10 @@ function saveName (){
         localStorage.setItem('nameInput', nameInput.value); 
         updateDisplay();
         }
+    }
+function clearName(){ 
+    localStorage.removeItem('nameInput'); 
+    updateDisplay();
     }
 function timeGreet() { 
     const time = new Date().getHours();
