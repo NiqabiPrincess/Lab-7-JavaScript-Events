@@ -56,19 +56,19 @@ function saveName (){
 function timeGreet() { 
     const time = new Date().getHours();
     if (time >= 5 && time <=10 ) { 
-        return 'Good Morning! Seize the Day and Make it Amazing,  '; 
+        return 'Submitted, Good Morning! Seize the Day and Make it Amazing,  '; 
     }
     
     else if (time >= 11 && time <= 17 ) { 
-        return 'Good Afternoon! Keep up the Great Work, '; 
+        return 'Submitted, Good Afternoon! Keep up the Great Work, '; 
     }
     
     else if (time >= 18 && time <= 22){ 
-        return 'Good Evening! Time to Unwind and Relax, ';
+        return 'Submitted, Good Evening! Time to Unwind and Relax, ';
     }
     
     else {
-        return 'Hey it is late! You Should be Sleeping and Recharging for Tomorrow! '; 
+        return 'Submitted, Hey it is late! You Should be Sleeping and Recharging for Tomorrow! '; 
         }
     }
     
@@ -88,3 +88,16 @@ function timeGreet() {
         document.getElementById('focusBlur').style.background = 'purple';
         messageF.textContent = "I'm lost!";
     }
+
+
+
+    const list = document.getElementById('lvlList');
+    const messageL = document.getElementById('listMessage');
+
+    list.addEventListener('click', function(event){
+        if (event.target.tagName === 'LI') {
+            alert('You Have Selected: ' + event.target.textContent);
+            messageL.textContent = "You Have Passed" + event.target.textContent;
+            event.target.style.backgroundColor = 'lightblue'; 
+        }
+    });

@@ -47,3 +47,12 @@ form {
 .form2{
     background-color: rgb(79, 201, 231);
 }
+
+
+li {
+    list-style-type: none;
+}
+
+ul{
+    background-color: rgb(250, 93, 138);
+}
